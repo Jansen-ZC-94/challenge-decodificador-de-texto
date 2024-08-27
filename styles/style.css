@@ -1,0 +1,161 @@
+
+:root {
+    --cor-primaria: #E5E5E5;
+    --cor-secundaria: #295F98;
+    --cor-terciaria: #ffffff;
+    --cor-quaternaria: #d3d3d3;
+
+    --fonte-primaria: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-primaria);
+    margin: 0;
+    padding: 0;
+
+}
+
+.cabecalho__logo {
+  margin-left: 5px;
+  padding-top: 15px;
+  width: 120px;
+  height: 48px;
+}
+
+.conteudo-principal {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.encriptador {
+  width: 45%;
+}
+
+
+.encriptador__conteudo__texto {
+  border: none;
+  border-radius: 24px;
+  color: var(--cor-secundaria);
+  text-transform: lowercase;
+  font-size: 2rem;
+  padding-top:2rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  
+}
+
+::placeholder {
+  color: var(--cor-quaternaria);
+  font-size: 2rem;
+}
+
+.encriptador__conteudo__texto:focus {
+    outline: none;
+}
+
+.encriptador__conteudo__mensagem {
+  background: var(--cor-terciaria) url(/assets/boneco_da_lupa.png) no-repeat center;
+  border: none;
+  border-radius: 24px;
+  color: var(--cor-secundaria);
+  font-size: 2rem;
+  padding-top:2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 100%;
+  width: 95%;
+  
+}
+
+.encriptador__conteudo__mensagem:focus {
+  outline: none;
+}
+
+.encriptador__conteudo__mensagem--sem-imagem {
+  background-image: none;
+}
+
+.encriptador__conteudo__botoes {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+
+.encriptador__conteudo__botoes__criptrografar,
+.encriptador__conteudo__botoes__descriptrografar,
+.encriptador__conteudo__botoes__copiar {
+  background-color: var(--cor-secundaria);
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 24px;
+  color: var(--cor-primaria);
+  font-size: 1rem;
+  cursor: pointer;
+  height: 4rem;
+  margin-top: 3.3rem;
+  width: 21rem;
+}
+
+
+.encriptador__conteudo__botoes__criptrografar:hover,
+.encriptador__conteudo__botoes__descriptrografar:hover,
+.encriptador__conteudo__botoes__copiar:hover {
+  background-color:var(--cor-terciaria);
+  color:var(--cor-secundaria);
+}
+
+
+.encriptador__conteudo__informacao {
+  display: flex;
+  justify-content:baseline;
+  
+}
+
+.encriptador__conteudo__informacao h6{
+  color: var(--cor-secundaria);
+  font-size: 1rem;
+  height: 2rem;
+  margin-left: 5px;
+  padding-top: 15px;
+}
+
+.rodape {
+  padding-top: 40%;
+  width: 100%;
+}
+
+.rodape__texto {
+  background-color: var(--cor-secundaria);
+  text-align:center;
+  padding: 1rem;
+  color: var(--cor-primaria);
+}
+
+@media (max-width:450px),(max-width:1200px) {
+
+  .conteudo-principal {
+    flex-direction: column;
+      padding: 5%;
+      width: 100%;
+  }
+
+  .encriptador {
+    width: 90%;
+  }
+
+  .encriptador__conteudo__mensagem {
+    margin-top: 3rem;
+  }
+
+
+}
+
+@media (min-width:1370px) {
+
+  .rodape {
+    padding-top: 18.7rem;
+  }
+}
